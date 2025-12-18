@@ -1,21 +1,21 @@
 #include "Fixed.hpp"
 
 // CONSTRUCTORS
-Fixed::Fixed() : fixed_point(0)
+Fixed::Fixed() : raw_value(0)
 {
     std::cout << "Default constructor called\n";
 }
-Fixed::Fixed(const int num) : fixed_point(num << fract)
+Fixed::Fixed(const int num) : raw_value(num << _bits)
 {
     std::cout << "Int constructor called\n";
 }
-Fixed::Fixed(const float num) : fixed_point((int)(num * 256))
+Fixed::Fixed(const float num) : raw_value((roundf(num * (1 << _bits))))
 {
     std::cout << "Float constructor called\n";
 }
 
 // COPY CONSTRUCTOR
-Fixed::Fixed(const Fixed& src) : fixed_point(src.fixed_point)
+Fixed::Fixed(const Fixed& src) : raw_value(src.raw_value)
 {
     std::cout << "Copy constructor called\n";
 }
@@ -26,7 +26,7 @@ Fixed &Fixed::operator=(const Fixed &src)
     std::cout << "Copy constructor called\n";
     if (this != &src)
     {
-        this->fixed_point = src.fixed_point;
+        this->raw_value = src.raw_value;
     }
     return *this;
 }
@@ -38,12 +38,12 @@ Fixed::~Fixed()
 
 int Fixed::toInt() const
 {
-    return this->fixed_point >> fract;
+    return this->raw_value >> _bits;
 }
 
 float Fixed::toFloat() const
 {
-    return (float)this->fixed_point / (1 << 8);
+    return (float)this->raw_value / (1 << 8);
 }
 
 std::ostream& operator<<(std::ostream& out_strm, const Fixed& obj)

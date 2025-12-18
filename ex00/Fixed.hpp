@@ -6,8 +6,8 @@
 class Fixed
 {
 private:
-    int fixed_point;
-    static const int fract = 8;
+    int raw_value;
+    static const int _bits = 8;
 public:
     Fixed();
     Fixed(const Fixed& src);
