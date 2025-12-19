@@ -3,27 +3,27 @@
 // CONSTRUCTORS
 Fixed::Fixed() : raw_value(0)
 {
-    std::cout << "Default constructor called\n";
+    // std::cout << "Default constructor called\n";
 }
 Fixed::Fixed(const int num) : raw_value(num << _bits)
 {
-    std::cout << "Int constructor called\n";
+    // std::cout << "Int constructor called\n";
 }
 Fixed::Fixed(const float num) : raw_value((roundf(num * (1 << _bits))))
 {
-    std::cout << "Float constructor called\n";
+    // std::cout << "Float constructor called\n";
 }
 
 // COPY CONSTRUCTOR
 Fixed::Fixed(const Fixed &src) : raw_value(src.raw_value)
 {
-    std::cout << "Copy Constructor\n";
+    // std::cout << "Copy Constructor\n";
 }
 
 // COPY ASSIGNMENT OPERATOR
 Fixed &Fixed::operator=(const Fixed &src)
 {
-    std::cout << "Copy constructor called\n";
+    // std::cout << "Copy constructor called\n";
     if (this != &src)
     {
         this->raw_value = src.raw_value;
@@ -33,7 +33,7 @@ Fixed &Fixed::operator=(const Fixed &src)
 
 Fixed::~Fixed()
 {
-    std::cout << "Destructor called\n";
+    // std::cout << "Destructor called\n";
 }
 
 float Fixed::toFloat() const
