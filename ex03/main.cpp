@@ -5,9 +5,9 @@ void check(Point const a, Point const b, Point const c, Point const p, std::stri
 {
     std::cout << status << " : ";
     if (bsp(a, b, c, p))
-        std::cout << "IN\n";
+        std::cout << "IN" << std::endl;
     else
-        std::cout << "OUT\n";
+        std::cout << "OUT" << std::endl;
 }
 
 int main()
