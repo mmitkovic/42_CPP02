@@ -6,7 +6,7 @@
 /*   By: mmitkovi <mmitkovi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 14:45:36 by mmitkovi          #+#    #+#             */
-/*   Updated: 2025/12/24 14:45:37 by mmitkovi         ###   ########.fr       */
+/*   Updated: 2026/01/06 14:12:03 by mmitkovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ Fixed Fixed::operator*(const Fixed& rghs) const
     return Fixed(this->toFloat() * rghs.toFloat());
 }
 
-// I/O stream --- Overloading stream insertion operators
+// I/O stream. Overloading stream insertion operators
 std::ostream& operator<<(std::ostream& out_strm, const Fixed& raw_value)
 {
     out_strm << raw_value.toFloat();

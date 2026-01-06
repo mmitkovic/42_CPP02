@@ -6,7 +6,7 @@
 /*   By: mmitkovi <mmitkovi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 14:44:49 by mmitkovi          #+#    #+#             */
-/*   Updated: 2025/12/24 14:44:50 by mmitkovi         ###   ########.fr       */
+/*   Updated: 2026/01/06 13:44:01 by mmitkovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void Fixed::setRawBits( int const raw )
 {
-    raw_value = raw;
+	raw_value = raw;
 }
 
 int Fixed::getRawBits( void ) const

@@ -6,11 +6,11 @@
 #    By: mmitkovi <mmitkovi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/24 14:45:05 by mmitkovi          #+#    #+#              #
-#    Updated: 2025/12/24 14:45:06 by mmitkovi         ###   ########.fr        #
+#    Updated: 2026/01/06 13:34:22 by mmitkovi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:= ofc
+NAME	:= ocf
 
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98
